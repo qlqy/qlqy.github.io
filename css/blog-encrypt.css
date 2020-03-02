@@ -1,0 +1,124 @@
+.hbe-input-container {
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 100px auto;
+}
+.hbe-input-container input {
+  -webkit-box-ordinal-group: 11;
+  order: 10;
+  -ms-flex-order: 10;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 20px;
+  border-bottom: 1px solid #d5d5d5;
+  text-indent: 10px;
+}
+.hbe-input-container input::-moz-placeholder {
+  opacity: 0;
+}
+.hbe-input-container input::-webkit-input-placeholder {
+  opacity: 0;
+}
+.hbe-input-container input:-ms-input-placeholder {
+  opacity: 0;
+}
+.hbe-input-container input,
+.hbe-input-container label {
+  transition: all 0.3s;
+}
+.hbe-input-container label {
+  -webkit-box-ordinal-group: 101;
+  -ms-flex-order: 100;
+  font-size: 18px;
+  order: 100;
+  color: #3f4f5b;
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transform: translate(10px, 40px);
+  transform: translate(0px, 40px);
+}
+.hbe-input-container .bottom-line {
+  order: 2;
+  width: 0;
+  height: 2px;
+  background: #363636;
+  transition: all 0.3s;
+}
+.hbe-input-container input:focus {
+  border-bottom-color: #fff;
+}
+.hbe-input-container input:focus ~ div,
+.hbe-input-container input:not(:placeholder-shown) ~ div {
+  width: 100%;
+}
+.hbe-input-container input:focus + label,
+.hbe-input-container input:not(:placeholder-shown) + label {
+  color: #52616c;
+  -webkit-transform: translate(10px) scale(0.9);
+  transform: translate(10px) scale(0.9);
+}
+
+.hbe-button {
+  width: 120px;
+  height: 40px;
+  background: #f0f0f0; /* W3C */
+  border: none;
+  border-radius: 5px;/*四边圆角*/
+  position: relative;/*位置布局：相对位置*/
+  border-bottom: #f0f0f0;
+  color: #363636;
+  font-weight: 500;/*字体粗度*/
+  font-family: 'Maiandra GD', sans-serif;
+/*文字大小14px,居中*/
+  font-size: 14px;
+  text-align: center;
+ 
+  
+  cursor: pointer;
+  display: block;
+  /*top:80 right=left:自动居中 botton:80*/
+  margin: 80px auto 80px auto;
+/*按钮渐变时间：2秒*/
+  transition:width 2s;
+ -moz-transition:width 2s; /* Firefox 4 */
+ -webkit-transition:width 2s; /* Safari and Chrome */
+ -o-transition:width 2s; /* Opera */
+}
+/*鼠标悬停效果：加宽到100%,圆角从5px到10px*/
+.hbe-button:hover{
+  width: 50%;
+  border-radius: 10px;
+}
+/*点击效果：上移1px*/
+.hbe-button:active {
+  top: 1px;
+}
+
+.hbe-button:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+
+  
+  border-left: 16px solid transparent;
+ 
+  position: absolute;
+  opacity: 0.6;
+  right: 0;
+  top: 0;
+  border-radius: 0 5px 5px 0;
+}
