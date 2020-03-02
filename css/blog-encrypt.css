@@ -55,7 +55,7 @@
   width: 0;
   height: 2px;
   background: #363636;
-  transition: all 0.3s;
+  transition: all 2s;
 }
 .hbe-input-container input:focus {
   border-bottom-color: #fff;
@@ -101,6 +101,8 @@
 .hbe-button:hover{
   width: 50%;
   border-radius: 10px;
+  background: #363636;
+  color: #fff;
 }
 /*点击效果：上移1px*/
 .hbe-button:active {
